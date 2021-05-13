@@ -1,12 +1,17 @@
-import React from 'react';
+import React,{useEffect,useState} from 'react';
 import { addCart  } from "../redux/actions/index";
 import { connect } from "react-redux";
 import jwt from "jwt-decode";
-var url = jwt(document.cookie.substring(6)).id; 
 
 
 const Cards = (props) => {
-
+    const [url,setUrl] = useState("");
+    useEffect(()=>{
+        if (document.cookie.substring(6)!=""){
+            var url = jwt(document.cookie.substring(6)).id; 
+            setUrl(url);
+        }
+    },[])
     return (
         <div className="card" style={{ width: " 18rem", margin: "15px" }}>
                 <img style={{ width: "100%" }} className="card-img-top" src={props.img} alt="triple_cheeseburger_web" />

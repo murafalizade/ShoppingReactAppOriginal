@@ -34,6 +34,7 @@
   },
   "scripts": {
     "server": "nodemon  ./server.js",
+    "starting":"react-scripts start",
     "dev": "webpack --mode development",
     "start": "node ./server.js",
     "build": "react-scripts build",
@@ -41,6 +42,10 @@
     "eject": "react-scripts eject"
   },
   "proxy": "http://localhost:3001/",
+  "engine": {
+    "node": "13.13.0",
+    "npm": "7.5.4"
+  },
   "browserslist": {
     "production": [
       ">0.2%",

@@ -26,13 +26,18 @@ app.use("/api/v1/users", CartRouter);
 
 //product
 app.use("/api/v1/products", Filter);
-app.use("/api/v1/products", Product );
+app.use("/api/v1/products", Product);
 
 //app
 app.use(express.static('build'))
-app.get("*",(req,res)=>{
-    res.sendFile(path.resolve(__dirname,  'build', 'index.html'));
+app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'build', 'index.html'));
 });
+// app.use(express.static('Client/build'));
+// app.get("*", (req, res) => {
+//     res.sendFile(path.resolve(__dirname, 'Client', 'build', 'index.html'));
+// })
+
 
 
 const port = process.env.PORT || 3001;

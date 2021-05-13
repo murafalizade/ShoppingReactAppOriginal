@@ -1,14 +1,17 @@
-import React, { useEffect } from 'react';
+import React, { useEffect,useState } from 'react';
 import { connect } from 'react-redux';
 import { deleteCart, addCart, getAllCart} from "../redux/actions";
 import jwt from "jwt-decode";
-const url = jwt(document.cookie.substring(6)).id; 
 
 
 
 const Cart = (props) => {
-
+    const [url, setUrl] = useState("");
     useEffect(() => {
+        if (document.cookie.substring(6)!==""){
+            const url = jwt(document.cookie.substring(6)).id; 
+            setUrl(url);
+        }
         console.log(url)
         props.getAllCart(url);
     }, []);
