@@ -1,0 +1,44 @@
+.sidenav {
+    border-right: 1px solid;
+  height: 100%;
+  width: 160px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 60px 8px 60px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181!important;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1!important;
+}
+
+.mains{
+    background-color:#111;
+  margin-left: 160px; /* Same as the width of the sidenav */
+}
+.mains td{
+    color:#818181
+}
+.mains th{
+    color:white;
+}
+.mains td:hover{
+    color:white;
+}
+.mains a{
+    color:#818181!important;
+}
+.scroll-container a{
+margin-right: 0;
+}
